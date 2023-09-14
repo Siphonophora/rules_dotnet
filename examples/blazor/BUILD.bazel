@@ -1,0 +1,27 @@
+load(
+    "@rules_dotnet//dotnet:defs.bzl",
+    "csharp_binary",
+    "csharp_library",
+    "csharp_nunit_test",
+)
+
+# bazel run //examples:blazor
+csharp_binary(
+    name = "blazor",
+    srcs = ["program.cs"],
+    additionalfiles = [
+        "_Imports.razor",
+        "App.razor",
+        "Pages/Index.razor",
+        "Pages/_Host.cshtml",
+        ],
+    private_deps = [
+        "@example_deps//microsoft.aspnetcore.app.ref",
+        "@example_deps//microsoft.netcore.app.ref",
+    ],
+    target_frameworks = ["net6.0"],
+    deps = [
+    ],
+)
+
+
