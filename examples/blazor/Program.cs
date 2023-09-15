@@ -10,7 +10,8 @@ using Microsoft.Extensions.Hosting;
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            // Add services to the container. 3e
+            
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();
 

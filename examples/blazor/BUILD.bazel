@@ -19,9 +19,38 @@ csharp_binary(
         "@example_deps//microsoft.aspnetcore.app.ref",
         "@example_deps//microsoft.netcore.app.ref",
     ],
+    project_sdk = "web",
     target_frameworks = ["net6.0"],
     deps = [
     ],
 )
 
+# Actual:
+# /analyzer:external/nuget.microsoft.aspnetcore.app.ref.v6.0.8/analyzers/dotnet/cs/Microsoft.AspNetCore.App.Analyzers.dll
+# /analyzer:external/nuget.microsoft.aspnetcore.app.ref.v6.0.8/analyzers/dotnet/cs/Microsoft.AspNetCore.App.CodeFixes.dll
+# /analyzer:external/nuget.microsoft.aspnetcore.app.ref.v6.0.8/analyzers/dotnet/roslyn4.0/cs/Microsoft.Extensions.Logging.Generators.dll
+# /analyzer:external/nuget.microsoft.netcore.app.ref.v6.0.8/analyzers/dotnet/cs/System.Text.Json.SourceGeneration.dll
 
+# Required
+        #  /analyzer:"C:\Program Files\dotnet\sdk\7.0.400\Sdks\Microsoft.NET.Sdk.Web\analyzers\cs\Microsoft.AspNetCore.Analyzers.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\sdk\7.0.400\Sdks\Microsoft.NET.Sdk.Web\analyzers\cs\Microsoft.AspNetCore.Mvc.Analyzers.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\sdk\7.0.400\Sdks\Microsoft.NET.Sdk.Web\analyzers\cs\Microsoft.AspNetCore.Components.SdkAnalyzers.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\sdk\7.0.400\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\sdk\7.0.400\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.NetAnalyzers.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.21\analyzers/dotnet/cs/System.Text.Json.SourceGeneration.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\6.0.21\analyzers/dotnet/cs/Microsoft.AspNetCore.App.Analyzers.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\6.0.21\analyzers/dotnet/cs/Microsoft.AspNetCore.App.CodeFixes.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\6.0.21\analyzers/dotnet/roslyn4.0/cs/Microsoft.Extensions.Logging.Generators.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\sdk\7.0.400\Sdks\Microsoft.NET.Sdk.Razor\targets\..\source-generators\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\sdk\7.0.400\Sdks\Microsoft.NET.Sdk.Razor\targets\..\source-generators\Microsoft.AspNetCore.Razor.Language.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\sdk\7.0.400\Sdks\Microsoft.NET.Sdk.Razor\targets\..\source-generators\Microsoft.AspNetCore.Razor.Utilities.Shared.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\sdk\7.0.400\Sdks\Microsoft.NET.Sdk.Razor\targets\..\source-generators\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\sdk\7.0.400\Sdks\Microsoft.NET.Sdk.Razor\targets\..\source-generators\Microsoft.CodeAnalysis.Razor.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\sdk\7.0.400\Sdks\Microsoft.NET.Sdk.Razor\targets\..\source-generators\Microsoft.Extensions.ObjectPool.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\sdk\7.0.400\Sdks\Microsoft.NET.Sdk.Razor\targets\..\source-generators\Microsoft.NET.Sdk.Razor.SourceGenerators.dll" 
+        #  /analyzer:"C:\Program Files\dotnet\sdk\7.0.400\Sdks\Microsoft.NET.Sdk.Razor\targets\..\source-generators\System.Collections.Immutable.dll" 
+        #  /additionalfile:App.razor 
+        #  /additionalfile:Pages\Index.razor 
+        #  /additionalfile:_Imports.razor 
+        #  /additionalfile:Pages\_Host.cshtml 
+        #  Program.cs 
