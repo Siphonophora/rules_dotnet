@@ -2,7 +2,7 @@
 
 GROUP example_deps
 STORAGE: NONE
-RESTRICTION: == net6.0
+RESTRICTION: || (== net6.0) (== netstandard2.0)
 NUGET
   remote: https://api.nuget.org/v3/index.json
     Expecto (9.0.4)
@@ -15,6 +15,22 @@ NUGET
     Microsoft.AspNetCore.App.Runtime.linux-x64 (6.0.8)
     Microsoft.AspNetCore.App.Runtime.osx-x64 (6.0.8)
     Microsoft.AspNetCore.App.Runtime.win-x64 (6.0.8)
+    Microsoft.AspNetCore.Razor.Language (6.0.22)
+    Microsoft.CodeAnalysis.Analyzers (3.3.4)
+    Microsoft.CodeAnalysis.Common (4.7)
+      Microsoft.CodeAnalysis.Analyzers (>= 3.3.4)
+      System.Collections.Immutable (>= 7.0)
+      System.Memory (>= 4.5.5) - restriction: == netstandard2.0
+      System.Reflection.Metadata (>= 7.0)
+      System.Runtime.CompilerServices.Unsafe (>= 6.0)
+      System.Text.Encoding.CodePages (>= 7.0) - restriction: == netstandard2.0
+      System.Threading.Tasks.Extensions (>= 4.5.4) - restriction: == netstandard2.0
+    Microsoft.CodeAnalysis.CSharp (4.7)
+      Microsoft.CodeAnalysis.Common (4.7)
+    Microsoft.CodeAnalysis.Razor (6.0.8)
+      Microsoft.AspNetCore.Razor.Language (>= 6.0.8)
+      Microsoft.CodeAnalysis.Common (>= 4.0)
+      Microsoft.CodeAnalysis.CSharp (>= 4.0)
     Microsoft.NETCore.App.Ref (6.0.8)
     Microsoft.NETCore.App.Runtime.linux-x64 (6.0.8)
     Microsoft.NETCore.App.Runtime.osx-x64 (6.0.8)
@@ -23,3 +39,21 @@ NUGET
     Mono.Cecil (0.11.4)
     NETStandard.Library (2.0.3)
       Microsoft.NETCore.Platforms (>= 1.1)
+    System.Buffers (4.5.1) - restriction: == netstandard2.0
+    System.Collections.Immutable (7.0)
+      System.Memory (>= 4.5.5) - restriction: || (&& (== net6.0) (>= net462)) (== netstandard2.0)
+      System.Runtime.CompilerServices.Unsafe (>= 6.0)
+    System.Memory (4.5.5) - restriction: == netstandard2.0
+      System.Buffers (>= 4.5.1) - restriction: || (&& (== net6.0) (>= monotouch)) (&& (== net6.0) (>= net461)) (&& (== net6.0) (< netcoreapp2.0)) (&& (== net6.0) (< netstandard1.1)) (&& (== net6.0) (< netstandard2.0)) (&& (== net6.0) (>= xamarinios)) (&& (== net6.0) (>= xamarinmac)) (&& (== net6.0) (>= xamarintvos)) (&& (== net6.0) (>= xamarinwatchos)) (== netstandard2.0)
+      System.Numerics.Vectors (>= 4.4) - restriction: || (&& (== net6.0) (< netcoreapp2.0)) (== netstandard2.0)
+      System.Runtime.CompilerServices.Unsafe (>= 4.5.3) - restriction: || (&& (== net6.0) (>= monotouch)) (&& (== net6.0) (>= net461)) (&& (== net6.0) (< netcoreapp2.0)) (&& (== net6.0) (< netcoreapp2.1)) (&& (== net6.0) (< netstandard1.1)) (&& (== net6.0) (< netstandard2.0)) (&& (== net6.0) (>= uap10.1)) (&& (== net6.0) (>= xamarinios)) (&& (== net6.0) (>= xamarinmac)) (&& (== net6.0) (>= xamarintvos)) (&& (== net6.0) (>= xamarinwatchos)) (== netstandard2.0)
+    System.Numerics.Vectors (4.5) - restriction: == netstandard2.0
+    System.Reflection.Metadata (7.0.2)
+      System.Collections.Immutable (>= 7.0)
+      System.Memory (>= 4.5.5) - restriction: || (&& (== net6.0) (>= net462)) (== netstandard2.0)
+    System.Runtime.CompilerServices.Unsafe (6.0)
+    System.Text.Encoding.CodePages (7.0) - restriction: == netstandard2.0
+      System.Memory (>= 4.5.5) - restriction: || (&& (== net6.0) (>= net462)) (== netstandard2.0)
+      System.Runtime.CompilerServices.Unsafe (>= 6.0)
+    System.Threading.Tasks.Extensions (4.5.4) - restriction: == netstandard2.0
+      System.Runtime.CompilerServices.Unsafe (>= 4.5.3) - restriction: || (&& (== net6.0) (>= net461)) (&& (== net6.0) (< netcoreapp2.1)) (&& (== net6.0) (< netstandard1.0)) (&& (== net6.0) (< netstandard2.0)) (&& (== net6.0) (>= wp8)) (== netstandard2.0)
